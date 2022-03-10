@@ -1,0 +1,147 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --oscuro2: #333333;
+    --gris: #757575;
+    --azulmenta: #1eae98;
+    --grisclaro: #dfe9fe;
+    --footerle: #5a595b;
+    --fuente-principal: 3.8rem; /*Tamaño de la letra*/
+    --primary-color:white;
+    --secondary-color:rgb(61,68,73);
+    --highligth-color: #3282b8;
+  }
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+  }
+  /**{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+    }*/
+  body {
+    box-sizing: border-box;
+    font-size: 16px; /*1rem=10px*/
+    font-family: Arial, Helvetica, sans-serif;
+    
+    /*background-color: var(--grisclaro);*/
+    background: #A1FFCE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+  }
+  
+  /*Titulos*/
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+/*registro producto/usuario/pedidos*/
+/*.form{
+width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+}*/
+  
+  .form{
+    background:#ffffff;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
+  .form2{
+    background:#ffffff;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
+  form .grupo{
+    position: relative;
+    margin: 45px;
+  
+  }
+  input{
+    background: none;
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--oscuro);
+  }
+  input:focus{
+    outline: none;
+    color: #5e5d5d;
+  }
+  label{
+    color: var(--azulmenta);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+  }
+  input:focus~label,
+  input:valid~label{
+    top:-14px;
+    font-size: 12px;
+    color:#2196f3; 
+  }
+  .barra{
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    background: linear-gradient(to right, #FAFFD1, #A1FFCE);
+    transition: 0.3s ease  width;
+    left: 0;
+  
+  }
+  input:focus~.barra::before{
+    width: 100%;
+  }
+  
+  .boton{
+    background: #136a8a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color:#fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  @media screen and (max-width:500px) {
+    .form{
+      width:80%;
+  
+    }
+    
+  }
