@@ -128,7 +128,6 @@ function Profile() {
             window.location.reload();
         }).catch((error) => {
             alert("No se pudieron actualizar los datos");
-            // console.log(error.response.data);
         })
     }
 
@@ -139,35 +138,42 @@ function Profile() {
 
     return (
         <div >
-            <div >
-                <div>
-                <button type="button" className="btn btn-info">Usuario {user}</button>
-                <button type="button" className="btn btn-danger" onClick={cerrar_sesion}>Cerrar sesion</button>
-                </div>
-                <div className="card">
-                    <div className="card-header">
-                        <img alt="imagen" id="preview" className="profile-img" />
-                    </div>
-                    <div className="card-body">
-                        <div>
-                            <input accept="image/*" type="file" id="img" className="inputImage" ></input>
+            <section class="seccion-perfil-usuario">
+                <div class="perfil-usuario-header">
+                    <div class="perfil-usuario-portada">
+                        <div class="perfil-usuario-avatar">
+                            <img alt="img-avatar" id="preview" />
+                            <button type="button" className="boton-avatar" >{user}
+                                <i class="far fa-image"></i>
+                            </button>
                         </div>
-                        <div className="contenedor-input">
+                        <button type="button" className="boton-portada" onClick={cerrar_sesion}>Cerrar sesion</button>
+                    </div>
+                </div>
+                <div class="perfil-usuario-body">
+                    <div class="perfil-usuario-bio">
+                        <div className="file-input">
+                            <input accept="image/*" type="file" id="img" className="inputImage" ></input>
                             <button type="button" className="btn btn-success" onClick={change_image}>Cambiar imagen</button>
                             <button type="button" className="btn btn-danger" onClick={delete_image}>Eliminar imagen</button>
                         </div>
-
-                        <p className="text"><b>First name: </b></p><input id="firstName"></input>
-                        <p className="text"><b>Last name:</b></p><input id="lastName"></input>
-                        <p className="text"><b>Username: </b></p><input id="username"></input>
-                        <p className="text"><b>E-mail: </b></p><input id="email"></input>
                     </div>
-                    <div  onClick={change_profile}>
-                        <button type="button" className="btn btn-success">Cambiar perfil</button>
+                    <div class="perfil-usuario-footer">
+                        <ul class="lista-datos">
+                            <p className="text"><b>First name: </b></p><input id="firstName"></input>
+                            <p className="text"><b>Username: </b></p><input id="username"></input>
+
+                        </ul>
+                        <ul class="lista-datos">
+                            <p className="text"><b>Last name:</b></p><input id="lastName"></input>
+                            <p className="text"><b>E-mail: </b></p><input id="email"></input>
+                        </ul>
+                        <div className="change_profile" onClick={change_profile}>
+                            <button type="button" className="btn btn-success">Cambiar perfil</button>
+                        </div>
                     </div>
                 </div>
-
-            </div>
+            </section>
         </div>
     )
 }
