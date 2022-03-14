@@ -10,7 +10,7 @@ function Login() {
             password: document.getElementById('password_l').value
         }
         axios.post("http://localhost:8000/api/v1/login/", postData, {
-            Headers:
+            headers:
             {
                 'Content-Type': 'application/json',
             }

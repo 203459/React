@@ -86,10 +86,10 @@ function Profile() {
             first_nameR = response.data.first_name;
             last_nameR = response.data.last_name;
             emailR = response.data.email;
-            document.getElementById("firstName").placeholder = first_nameR;
-            document.getElementById("lastName").placeholder = last_nameR;
-            document.getElementById("email").placeholder = emailR;
-            document.getElementById("username").placeholder = usernameR;
+            document.getElementById("firstName").value = first_nameR;
+            document.getElementById("lastName").value = last_nameR;
+            document.getElementById("email").value = emailR;
+            document.getElementById("username").value = usernameR;
         }).catch((error) => {
             alert("No se pudieron obtener los datos");
         })
@@ -168,9 +168,9 @@ function Profile() {
                             <p className="text"><b>Last name:</b></p><input id="lastName"></input>
                             <p className="text"><b>E-mail: </b></p><input id="email"></input>
                         </ul>
-                        <div className="change_profile" onClick={change_profile}>
+                         <div className="change_profile" onClick={change_profile}>
                             <button type="button" className="btn btn-success">Cambiar perfil</button>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </section>
