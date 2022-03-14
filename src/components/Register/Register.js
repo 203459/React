@@ -48,13 +48,13 @@ function App() {
             </label>
           </div>
           <div className={"grupo"}>
-            <input type="text" id="password" required /><span className={"barra"}></span>
+            <input type="password" id="password" required /><span className={"barra"}></span>
             <label>
               ingrese la contraseña
             </label>
           </div>
           <div className={"grupo"}>
-            <input type="text" id="password2" required /><span className={"barra"}></span>
+            <input type="password" id="password2" required /><span className={"barra"}></span>
             <label>
               confirme su contraseña
             </label>
